@@ -38,5 +38,5 @@ addons:
 script:
   # other script steps might be done before running the actual analysis
   - sonar-scanner
-
+ 
 #Analyze "Test-int": 3db40184c5d40f91a2d735c784ad677bf26ba0ff
