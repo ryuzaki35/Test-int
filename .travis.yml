@@ -21,9 +21,9 @@ script:
 - mysql -e 'CREATE DATABASE keros_test;'
 - mysql keros_test < src/Tools/Database/keros.sql
 - ./vendor/bin/phpunit -c tests/phpunit.xml
-notifications:
-  slack:
-    on_success: always
-  email:
-    recipients:
-      - quentin.besnard1996@gmail.com
+  notifications:
+    slack:
+      on_success: always
+    email:
+      recipients:
+        - quentin.besnard1996@gmail.com
