@@ -40,6 +40,7 @@ script:
   - ls -la
   - find -name "coverage.xml"
   - ls logs/
+  - cat logs/app.log
   - ls tests/
   # other script steps might be done before running the actual analysis
   #- sonar-scanner
