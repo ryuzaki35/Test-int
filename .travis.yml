@@ -19,10 +19,7 @@ env:
 install:
 - composer install
 script:
-- cp .deploy/.travis.settings.ini src/settings.ini
-- mysql -e 'CREATE DATABASE keros_test;'
-- mysql keros_test < src/Tools/Database/keros.sql
-- ./vendor/bin/phpunit -c tests/phpunit.xml
+
 
 #notifications: 
 #    slack: rfpetic:sjuKoUblvrOzgWgdCiGO1nYN
@@ -36,6 +33,10 @@ addons:
     token:
      secure: "ZRLYWAnVatplJuT1N6NsEr5wGOTTxw8QBgSpWRGL2PvzEQC7OansgHD/AvJ7rp9Jxe9VBiIfgU2Jk8ugmj+el0WzcEl04W5BCITfHsx5Gd89qCOlJ/yOBZCZjuuolt7yLRaCvNWHdSqcnAD3IsfssLutvl9jtpaz0jnlyu8/8Sj662SJqUsZ1BAtHxnSE0zZOYiHI9T4keANHa+3qPKkRUjaFaij7lJIdudXcOYOHp8qZTS3IdksowvHrd4/F/L8TRCsTGMOyEaIjhDhGFusoZ4Ofoc6Q893Zq/xlqCjfQNJjtdbDI/o1JuN38iVzB7Tf7SIg1hS40CwKUoRQ9Welxg5f9hVWIfpTkcPKxTkiwdEU+T7aATnG/8+TbkogTczYF97ydhv7p+FtIoZWJeQ5ZTFULVnndaCtTL7CIVhHK0r5V4OjaJAEzkHgqLCEZwCtkQqHqkWDTaI7roCIx3JNtde12xAyb19/i8LwEUgBjwUJ8OMSfDQRsolPyGD6ntTC6LpGn4feT0Ng/p99v1NqHtGTL741aHz3r8xfni+n49+//YdoPCzUoCk7Y1b1/wk8+nPdSyoYjZ/CRM72MNrtCywKjgzmzjtt1OQ6Mwt6UZAgxq60rM3z0kyPd0kr9rlSv5eVdvwKOJ3PpkpCamr9cV8y0Xc/GmbPkZwEXEMSY0=" # encrypted value of your token
 script:
+  - cp .deploy/.travis.settings.ini src/settings.ini
+  - mysql -e 'CREATE DATABASE keros_test;'
+  - mysql keros_test < src/Tools/Database/keros.sql
+  - ./vendor/bin/phpunit -c tests/phpunit.xml
   # other script steps might be done before running the actual analysis
   - sonar-scanner
  #Analyze "Test-int" 2: 098935cf8987e8d233c80e912746f0dc24d0eddd
