@@ -1,6 +1,3 @@
-notifications:
-  email:
-    - quentin.besnard1996@gmail.com
 language: php
 php:
 - '7.2'
@@ -34,3 +31,7 @@ deploy:
   script: bash .deploy/deploy-staging.sh
   on:
     branch: deploy-staging
+
+notifications:
+  email:
+    - quentin.besnard1996@gmail.com
