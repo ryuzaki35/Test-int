@@ -33,5 +33,8 @@ deploy:
     branch: deploy-staging
 
 notifications:
+  slack:
+    on_success: always
   email:
-    - quentin.besnard1996@gmail.com
+    recipients:
+      - quentin.besnard1996@gmail.com
