@@ -1,3 +1,6 @@
+notifications:
+  email:
+    - quentin.besnard1996@gmail.com
 language: php
 php:
 - '7.2'
