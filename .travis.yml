@@ -25,19 +25,18 @@ script:
 - ./vendor/bin/phpunit -c tests/phpunit.xml
 
 notifications:
-    slack:
-      on_success: always
+    slack: rfpetic:sjuKoUblvrOzgWgdCiGO1nYN
     email:
       recipients:
         - quentin.besnard1996@gmail.com
 
-addons:
-  sonarcloud:
-    organization: "ryuzaki35-github" # the key of the org you chose at step #3
-    token:
-      secure: "Tho38+2X9rM+urNslwsjt6Q8BnaoI1kArTvAhQXEMVMPqC+o89DK8J8Ap0Zvj8SvnVhtZGnkFnIrHPMdNld+CafS/EUcjOJ0SM5kIrXogKI3Pn3SfUDcsSMckHO0z7sStBUlcRNzObRwPgTyfgKl4GCaB9Sq/sxlAZJ6Qld4063Jsrdlsm5O/FLrwM1cqKM86lf8LRW8N5LCDWT886YTQ9KSQJOEA4+IcdrVz1VK/0swhBQEJ6wLUXI1mropaAAthVGLn9fWfLNJtJOgFSOduiAQ3sCLOiv4hIrnBdp88nYtIA0ukLXo6Clbj6NVM4HVNKvki5tKDP73KYY2P6uYbdBV8V8nIEx/2Lpx/fiREO0vY+k+aX85uS1GcKteikCmcwUb6d6Hv5P0AvVVjsF5legDG0gZg5/8mHZ/UNfll9vsZlelH/xeo3JDqWNO3PM/tzjlbEp8kJDzy2bzXPZcqxHqr1FZykPyumn3pGQswfW2Ou8N+QZpN0BvBt5POdwCQZf3LPxpM2Sey3lGaADvRHp/zzCPl6hF5qodAS55qWLd8orSnbpZIjFdfMEOrM1rNbdKBYbI8ktRQ4GIlnvXahuVqKIUDY2Y9M4K1ymjiA2Z4aONxcHo1G6FjdSoOK77qvZ1R2wYSbEaatKj4dSYZulv2i3KbOwKJferaIWjucE=" # encrypted value of your token
-script:
+#addons:
+  #sonarcloud:
+   # organization: "ryuzaki35-github" # the key of the org you chose at step #3
+    #token:
+    #  secure: "Tho38+2X9rM+urNslwsjt6Q8BnaoI1kArTvAhQXEMVMPqC+o89DK8J8Ap0Zvj8SvnVhtZGnkFnIrHPMdNld+CafS/EUcjOJ0SM5kIrXogKI3Pn3SfUDcsSMckHO0z7sStBUlcRNzObRwPgTyfgKl4GCaB9Sq/sxlAZJ6Qld4063Jsrdlsm5O/FLrwM1cqKM86lf8LRW8N5LCDWT886YTQ9KSQJOEA4+IcdrVz1VK/0swhBQEJ6wLUXI1mropaAAthVGLn9fWfLNJtJOgFSOduiAQ3sCLOiv4hIrnBdp88nYtIA0ukLXo6Clbj6NVM4HVNKvki5tKDP73KYY2P6uYbdBV8V8nIEx/2Lpx/fiREO0vY+k+aX85uS1GcKteikCmcwUb6d6Hv5P0AvVVjsF5legDG0gZg5/8mHZ/UNfll9vsZlelH/xeo3JDqWNO3PM/tzjlbEp8kJDzy2bzXPZcqxHqr1FZykPyumn3pGQswfW2Ou8N+QZpN0BvBt5POdwCQZf3LPxpM2Sey3lGaADvRHp/zzCPl6hF5qodAS55qWLd8orSnbpZIjFdfMEOrM1rNbdKBYbI8ktRQ4GIlnvXahuVqKIUDY2Y9M4K1ymjiA2Z4aONxcHo1G6FjdSoOK77qvZ1R2wYSbEaatKj4dSYZulv2i3KbOwKJferaIWjucE=" # encrypted value of your token
+#script:
   # other script steps might be done before running the actual analysis
-  - sonar-scanner
+ # - sonar-scanner
 
 #Analyze "Test-int": 3db40184c5d40f91a2d735c784ad677bf26ba0ff
