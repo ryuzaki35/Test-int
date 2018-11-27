@@ -36,7 +36,9 @@ script:
   - cp .deploy/.travis.settings.ini src/settings.ini
   - mysql -e 'CREATE DATABASE keros_test;'
   - mysql keros_test < src/Tools/Database/keros.sql
-  - ./vendor/bin/phpunit -c tests/phpunit.xml --debug
+  - ./vendor/bin/phpunit -c tests/phpunit.xml --debug --stop-on-failure
+  - ls -la
+  - ls tests/
   # other script steps might be done before running the actual analysis
-  - sonar-scanner
+  #- sonar-scanner
  #Analyze "Test-int" 2: 098935cf8987e8d233c80e912746f0dc24d0eddd
