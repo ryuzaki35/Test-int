@@ -6,8 +6,8 @@
         </testsuite>
     </testsuites>
     <logging>
-        <log type="testdox-text" target="/logs/text.txt"/>
-        <log type="coverage-clover" target="/logs/clover.xml"/>
+        <log type="testdox-text" target="logs/text.txt"/>
+        <log type="coverage-clover" target="logs/clover.xml"/>
     </logging>
     <php>
         <env name="ENV" value="test"/>
