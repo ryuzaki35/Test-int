@@ -1,0 +1,10 @@
+# Composer dependencies
+vendor
+
+# Jetbrains files
+.idea
+*.iml
+
+# Ignore logs but keep directory
+logs/*
+!logs/.gitkeep

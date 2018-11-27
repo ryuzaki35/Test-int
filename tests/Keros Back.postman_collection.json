@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "c75373fa-c1b0-4b8b-90b5-7bfc292ea086",
+		"name": "Keros Back",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Cat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/cat/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cat",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Cats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/cat?orderBy=id&order=asc&pageNumber=1&pageSize=12&search=T",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cat"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "id"
+						},
+						{
+							"key": "order",
+							"value": "asc"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "12"
+						},
+						{
+							"key": "search",
+							"value": "T"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Cat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "height",
+							"value": "7.4",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Tom",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/cat",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cat"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	}
+}
