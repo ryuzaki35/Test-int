@@ -38,7 +38,7 @@ script:
   - mysql keros_test < src/Tools/Database/keros.sql
   - ./vendor/bin/phpunit -c tests/phpunit.xml --debug --stop-on-failure
   #- ls -la
-  - locate coverage.xml
+  - find -name "coverage.xml"
   # other script steps might be done before running the actual analysis
   #- sonar-scanner
  #Analyze "Test-int" 2: 098935cf8987e8d233c80e912746f0dc24d0eddd
