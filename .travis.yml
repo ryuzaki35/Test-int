@@ -43,5 +43,5 @@ script:
   - ls tests/
   - ls logs/
   # other script steps might be done before running the actual analysis
-  - sonar-scanner-debug
+  - sonar-scanner --debug
  #Analyze "Test-int" 2: 098935cf8987e8d233c80e912746f0dc24d0eddd
