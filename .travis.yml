@@ -40,7 +40,7 @@ script:
   - find -name "coverage.xml"
   - find -name "logfile.xml"
   #- cat tests/logfile.xml
-  - tree
+  #- tree
   #- ls tests/
   #- ls logs/
   # other script steps might be done before running the actual analysis
