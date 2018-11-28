@@ -18,8 +18,10 @@ env:
   - LC_ALL=fr_FR.UTF-8
 install:
 - composer install
-script:
-
+- wget https://phar.phpunit.de/phpunit-6.5.phar
+- chmod +x phpunit-6.5.phar
+- sudo mv phpunit-6.5.phar /usr/local/bin/phpunit
+- phpunit --version
 
 #notifications: 
 #    slack: rfpetic:sjuKoUblvrOzgWgdCiGO1nYN
