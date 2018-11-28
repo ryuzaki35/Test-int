@@ -18,9 +18,6 @@ env:
   - LC_ALL=fr_FR.UTF-8
 install:
 - composer install
-- wget https://phar.phpunit.de/phpunit-6.5.phar
-- chmod +x phpunit-6.5.phar
-- sudo mv phpunit-6.5.phar /usr/local/bin/phpunit
 - phpunit --version
 
 #notifications: 
@@ -38,7 +35,7 @@ script:
   - cp .deploy/.travis.settings.ini src/settings.ini
   - mysql -e 'CREATE DATABASE keros_test;'
   - mysql keros_test < src/Tools/Database/keros.sql
-  - phpunit -c tests/phpunit.xml --stop-on-failure
+  - ./vendor/bin/phpunit -c tests/phpunit.xml --stop-on-failure
   - find -name "coverage.xml"
   - find -name "logfile.xml"
   #- cat tests/logfile.xml
