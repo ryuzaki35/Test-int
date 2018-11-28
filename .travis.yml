@@ -38,7 +38,7 @@ script:
   - cp .deploy/.travis.settings.ini src/settings.ini
   - mysql -e 'CREATE DATABASE keros_test;'
   - mysql keros_test < src/Tools/Database/keros.sql
-  - ./vendor/bin/phpunit -c tests/phpunit.xml --stop-on-failure
+  - phpunit -c tests/phpunit.xml --stop-on-failure
   - find -name "coverage.xml"
   - find -name "logfile.xml"
   #- cat tests/logfile.xml
